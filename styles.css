@@ -110,13 +110,12 @@ body {
 }
 
 .nav-link:hover {
-    opacity: 0.5;
-    animation: flicker 0.3s ease;
+    animation: flicker 0.1s ease infinite;
 }
 
 @keyframes flicker {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
 }
 
 .schedule-button {
@@ -644,11 +643,12 @@ body {
 
 .link-button:hover {
     background-color: #FFFFFF;
-    animation: flicker 0.3s ease;
+    animation: flicker 0.1s ease infinite;
 }
 
 .link-button:hover span {
     color: #111111;
+    animation: flicker 0.1s ease infinite;
 }
 
 /* Making */
@@ -714,8 +714,11 @@ body {
 }
 
 .news-item:hover {
-    border-bottom-color: rgba(255, 255, 255, 0.6);
-    animation: flicker 0.3s ease;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.news-item:hover .news-description {
+    animation: flicker 0.1s ease infinite;
 }
 
 .news-date {
@@ -839,8 +842,7 @@ body {
 }
 
 .social-link:hover {
-    opacity: 0.7;
-    animation: flicker 0.3s ease;
+    animation: flicker 0.1s ease infinite;
 }
 
 .social-icon {

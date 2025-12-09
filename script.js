@@ -81,13 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScroll = currentScroll;
     });
 
-    // Flicker animation for text links on hover
-    const textLinks = document.querySelectorAll('.nav-link, .news-item, .link-button, .social-link');
-    textLinks.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-            link.style.animation = 'flicker 0.3s ease';
-        });
-    });
+    // Flicker animation is now handled in CSS with infinite iteration
 
     // Parallax effect for FV section
     const fvSection = document.querySelector('.fv');
@@ -102,15 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Add flicker keyframes if not already in CSS
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes flicker {
-        0%, 100% { opacity: 1; }
-        25% { opacity: 0.7; }
-        50% { opacity: 1; }
-        75% { opacity: 0.8; }
-    }
-`;
-document.head.appendChild(style);
+// Flicker animation is now handled in CSS with infinite iteration
+
 
